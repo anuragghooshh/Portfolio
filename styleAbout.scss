@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+@import "style.scss";
+nav{
+    .navs{
+        a:nth-child(1){
+            color: var(--fontColor);
+        }
+        a:nth-child(2){
+            color: var(--specific);
+        }
+        a:hover{
+            color: var(--specific);
+        }
+    }
+}
+.container{
+    padding-top: clamp(7rem,20vh,15rem);
+    padding-bottom: 2.5rem;
+    padding-left: 5em;
+    padding-right: 5em;
+    background-color: var(--backgoundColor);
+    .all{
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        .part{
+            display: flex;
+            gap: 5em;
+            justify-content: space-between;
+            
+            .subPart1{
+                flex-basis: 50%;
+                align-self: center;
+
+                h1,p{
+                    font-family: 'Montserrat', sans-serif;
+                    color: var(--fontColor);
+                }
+                h1{
+                    font-size: $sizeLar2;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: $sizeMed;
+                    font-weight: 600;
+                    a{
+                        text-decoration: none;
+                        font-weight: 800;
+                        color: var(--specific);
+                    }
+                    a:hover{
+                        color: var(--backgoundColor);
+                        background-color: var(--specific);
+                    }
+                }
+            }
+            .subPart2{
+                
+                >img{
+                    padding: 0.5em;
+                    width: 25rem;
+                    border: 2px solid var(--fontColor);
+                }
+            }
+        }
+        >:nth-child(1){
+            flex-basis: clamp(20rem,50%,35rem);
+            .subPart1{
+                align-self: center;
+            }
+        }
+        >:nth-child(2){
+            .subPart2{
+                display: flex;
+                gap: 1.5rem;
+                a{
+                    img{
+                        width: 5em;
+                        transform: scale(100%);
+                        transition: 0.1s ease-in-out;
+                    }
+                }
+                a:hover{
+                    img{
+                        transform: scale(110%);
+                        transition: 0.1s ease-in-out;
+                    }
+                }
+            }
+        }
+        >:nth-child(3){
+            .subPart2{
+                display: flex;
+                a{
+                    align-self: center;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 600;
+                    font-size: $sizeLar;
+                    text-decoration: none;
+                    color: var(--specific);
+                }
+                a:hover{
+                    color: var(--backgoundColor);
+                    background-color: var(--specific);
+                }
+            }
+        }
+        footer{
+            p{
+                font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    font-size: $sizeSml2;
+                    color: var(--fontColor);
+            }
+        }
+    }
+}
+// Responsiveness (Tablet)----->
+@media only screen and (max-width:868px) and (min-width:481px){
+    .container{
+        padding-top: clamp(7rem,10vh,15rem);
+        .all{
+            >div{
+                flex-direction: column;
+                >div{
+                    align-self: center;
+                }
+            }
+            >:nth-child(1){
+                gap: 3em;
+                h1{
+                    font-size: $sizeLar2S;
+                    text-align: center;
+                }
+                p{
+                    font-size: $sizeMedS;
+                    text-align: center;
+                }
+            }
+            >:nth-child(2){
+                .subPart1{
+                    h1{
+                        font-size: $sizeLar2S;
+                    }
+                }
+                gap: 3em;
+            }
+            >:nth-child(3){
+                .subPart1{
+                    h1{
+                        font-size: $sizeLar2S;
+                    }
+                }
+                gap: 3em;
+            }
+            footer{
+                p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// Responsiveness (Smartphones)----->
+@media only screen and (max-width: 480px){
+    .container{
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-top: clamp(7rem,10vh,15rem);
+        .all{
+            >div{
+                flex-direction: column;
+                >div{
+                    align-self: center;
+                }
+            }
+            >:nth-child(1){
+                gap: 3em;
+                .subPart1{
+                    h1{
+                        font-size: $sizeLar2S;
+                        text-align: center;
+                    }
+                    p{
+                        font-size: $sizeMedS;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .subPart2{
+                    align-self: center;
+                    img{
+                        width: 18em;
+                        
+                    }
+                }
+            }
+            >:nth-child(2){
+                gap: 2em;
+                .subPart1{
+                    align-self: center;
+                    h1{
+                        font-size: $sizeLar2S;
+                    }
+                }
+                .subPart2{
+                    align-self: center;
+
+                    a{
+                        img{
+                            width: 3em;
+                        }
+                    }
+                }
+            }
+            >:nth-child(3){
+                gap: 2em;
+                .subPart1{
+                    align-self: center;
+                    h1{
+                        font-size: $sizeLar2S;
+                    }
+                }
+                .subPart2{
+                    align-self: center;
+
+                    a{
+                        font-size: $sizeMedS;
+                    }
+                }
+            }
+            footer{
+                p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

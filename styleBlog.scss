@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+@import "style.scss";
+nav{
+    .navs{
+        a:nth-child(1){
+            color: var(--fontColor);
+        }
+        a:nth-child(2){
+            color: var(--fontColor);
+        }
+        a:nth-child(3){
+            color: var(--specific);
+        }
+        a:hover{
+            color: var(--specific);
+        }
+    }
+}
+.container{
+    padding-top: clamp(6rem,15vh,10rem);
+    padding-bottom: 2.5rem;
+    padding-left: 5em;
+    padding-right: 5em;
+    background-color: var(--backgoundColor);
+    .all{
+        display: flex;
+        flex-direction: column;
+        .blogs{
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            h1{
+                font-family: 'Montserrat', sans-serif;
+                font-size: $sizeLar2;
+                font-weight: 800;
+                color: var(--fontColor);
+            }
+            h3{
+                font-family: 'Montserrat', sans-serif;
+                font-size: $sizeSml2;
+                font-weight: 600;
+                color: var(--lighter);
+            }
+            >:nth-child(3){
+                display: flex;
+                justify-content: space-between;
+                gap: 3em;
+                >div{
+                    display: flex;
+                    img{
+                        align-self: center;
+                        width: 45vw;
+                        padding: 0.5em;
+                        border: 2px solid var(--fontColor);
+                    }
+                }
+                p{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: $sizeMed;
+                    font-weight: 500;
+                    text-align: left;
+                    color: var(--fontColor);
+                    line-height: 1.5em;
+                    
+                }
+            }
+            >:nth-child(4){
+                p{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: $sizeMed;
+                    text-align: left;
+                    font-weight: 500;
+                    color: var(--fontColor);
+                    line-height: 1.5em;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5em;
+                    list-style:georgian;
+                    li{
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: $sizeMed;
+                        color: var(--fontColor);
+                        h4{
+                            font-weight: 600;
+                        }
+                        p{
+                            color: var(--fontColor);
+                            margin-bottom: 1em;
+                        }
+                        >div{
+                            margin-bottom: 1em;
+                            display: flex;
+                            justify-content: flex-end;
+                            img{
+                                position: relative;
+                                width: 100%;
+                                padding: 0.25em;
+                                border: 2px solid var(--fontColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            margin-top: 3em;
+            display: flex;
+            gap: 2em;
+            justify-content: space-between;
+            
+            >p{
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                font-size: $sizeSml2;
+                font-weight: 600;
+                color: var(--fontColor);
+            }
+            >div{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+                span{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: $sizeSml2;
+                    font-weight: 600;
+                    color: var(--fontColor);
+                    text-decoration: none;
+                    transform: scale(100%);
+                    align-self: flex-end;
+                    a{
+                        font-weight: 600; 
+                        color: var(--specific);
+                        text-decoration: none;
+                    }
+
+                }
+            }
+        }
+    }
+}
+// Responsiveness (Tablet)----->
+@media only screen and (max-width:868px) and (min-width:481px){
+    .container{
+        .all{
+            .blogs{
+                h1{
+                    font-size: $sizeLarS;
+                }
+                h3{
+                    font-size: $sizeMedS;
+
+                }
+                :nth-child(3){
+                    flex-direction: column;
+                    p{
+                        font-size: $sizeMedS;
+                    }
+                    >div{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                :nth-child(4){
+                    ul{
+                        li{
+                            h4,p{
+                                font-size: $sizeMedS;
+                            }
+                            h4{
+                                font-weight: 800;
+                            }
+                            >div{
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+            footer{
+                flex-direction: column-reverse;
+                gap: 0em;
+                align-items: center;
+                >div{
+                    align-self: center;
+                    span{
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+// Responsiveness (Smartphones)----->
+@media only screen and (max-width: 480px){
+    .container{
+        padding-left: 2em;
+        padding-right: 2em;
+        .all{
+            .blogs{
+                h1{
+                    font-size: $sizeLarS;
+                }
+                h3{
+                    font-size: $sizeMedS;
+
+                }
+                :nth-child(3){
+                    flex-direction: column;
+                    >div{
+                        p{
+                            font-size: $sizeMedS;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                :nth-child(4){
+                    ul{
+                        li{
+                            h4,p{
+                                font-size: $sizeMedS;
+                                text-align: justify;
+                                text-align-last: left;
+                            }
+                            h4{
+                                font-weight: 800;
+                            }
+                            >div{
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+            footer{
+                flex-direction: column-reverse;
+                align-items: center;
+                >div{
+                    align-self: center;
+                    span{
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                }    
+            }
+        }
+    }
+}
