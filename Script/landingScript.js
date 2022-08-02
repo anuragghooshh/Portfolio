@@ -19,7 +19,6 @@ try {
   console.log(error);
 }
 
-
 // Dark Mode
 let mode = document.getElementById("mode");
 let r = document.querySelector(":root");

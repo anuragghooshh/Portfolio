@@ -23,6 +23,17 @@ $sizeLar2S : clamp(1.5rem,7.5vw,1.8rem);
 }
 
 //All ----->
+::-webkit-scrollbar {
+    width: 12px;
+    background: none;
+}
+::-webkit-scrollbar-track {
+    background: #d7d6d6;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--lighter);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -344,7 +355,7 @@ nav{
                     padding: 0.5em;
                     border: solid 2px var(--fontColor);
                 }
-                
+    
             }
             :last-child{
                 display: flex;
@@ -431,7 +442,7 @@ nav{
                 text-align: center;
                 font-family: 'Montserrat', sans-serif;
                 font-size: $sizeSml2;
-                font-weight: 600;
+                font-weight: 500;
                 color: var(--fontColor);
             }
             >div{
@@ -441,7 +452,7 @@ nav{
                 span{
                     font-family: 'Montserrat', sans-serif;
                     font-size: $sizeSml2;
-                    font-weight: 600;
+                    font-weight: 500;
                     color: var(--fontColor);
                     text-decoration: none;
                     transform: scale(100%);
@@ -489,8 +500,6 @@ nav{
         flex-basis: 35%;
         position: sticky;
         align-self: start;
-        top: clamp(2.5em,10vw,2.5em);
-        top: 3em;
     }
     .carousel{
         display: grid;
@@ -633,6 +642,9 @@ nav{
 #pe3::after{
     background-image: url(./Resources/Images/marriage.jpg);
 }
+#pe4::after{
+    background-image: url(./Resources/Images/Spiderman.jpg);
+}
 
 #ix1::after{
     background-image: url(./Resources/Images/YourSkoolUX.jpg);
@@ -758,7 +770,6 @@ nav{
     .showcase{
         >h1{
             font-size: $sizeLar2S;
-            top: 4em;
             flex-basis: 40%;
         }
         .carousel{

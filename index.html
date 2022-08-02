@@ -49,8 +49,6 @@
                     <div class="underline"></div>
                     <p id="short">Hey, I am Anurag Ghosh.&#x1F44B;A Computer Application scholar.&#x1F9D1;<br> I Love to make things be and look like out of this world. &#x1F30F;<br> Having been a Graphics Enthusiast for more than 5 years, I have unrolled my reach over more domains like VFX, UI/UX and many more! I begin my projects not thinking what I'd like but thinking what people will prefer, And also, I believe this is the Key!</p>
                 </div>
-                <!-- <div class="before"></div>  -->
-                <!-- <div class="after"></div>  -->
             </div>
         </div>
         <div id="section3" class="section">
@@ -82,7 +80,7 @@
         <div id="section2" class="section">
             <div class="all">
                 <div class="showcase" id="gd">
-                    <h1>Graphic Design &#x1F3A8;</h1>
+                    <h1 class="domainName">Graphic Design &#x1F3A8;</h1>
                     <div class="carousel">
                         <a id="gd1" class="images" href="https://www.behance.net/gallery/110304967/THE-MONSTRER-TRIO" target="_blank"><h1 class="title">Monster Trio</h1></a>
                         <a id="gd2" class="images" href="https://www.behance.net/gallery/127646471/Liquid-RGB-Text" target="_blank"><h1 class="title">Liquid RGB Text</h1></a>
@@ -93,7 +91,7 @@
                     </div>
                 </div>
                 <div class="showcase" id="mg">
-                    <h1>Motion Graphics &#x1F3C3;</h1>
+                    <h1 class="domainName">Motion Graphics &#x1F3C3;</h1>
                     <div class="carousel">
                         <a id="mg1" class="images" href="https://drive.google.com/file/d/12FmYVfErNJ2TS4_2oTYMLXJTFu851kAj/preview" target="_blank"><h1 class="title">Grievance Redressal (Project)</h1></a>
                         <a id="mg2" class="images" href="https://drive.google.com/file/d/1xh8PGIbFQ30QyH4PEBc_J16dgBhW9IJH/preview" target="_blank"><h1 class="title">Graphic Guy Intro</h1></a>
@@ -101,7 +99,7 @@
                     </div>
                 </div>
                 <div class="showcase" id="vx">
-                    <h1>VFX &#x1F3A5;</h1>
+                    <h1 class="domainName">VFX &#x1F3A5;</h1>
                     <div class="carousel">
                         <a id="vx1" class="images" href="https://drive.google.com/file/d/1p_FvhiaJqBIs7pyuJx3nvnteW_TELwEF/preview" target="_blank"><h1 class="title">Kolkata 2077</h1></a>
                         <a id="vx2" class="images" href="https://drive.google.com/file/d/19fPHVXV0nNXjY2cNl4uGOPWlr-DbKQvB/preview" target="_blank"><h1 class="title">Sharingan & Rinnegan</h1></a>
@@ -109,22 +107,23 @@
                     </div>
                 </div>
                 <div class="showcase" id="pe">
-                    <h1>Photo Editing &#x1F5BC;</h1>
+                    <h1 class="domainName">Photo Editing &#x1F5BC;</h1>
                     <div class="carousel">
                         <a id="pe1" class="images" href="https://www.behance.net/gallery/127645149/Cats-of-the-Dark" target="_blank"><h1 class="title">Cats of the Dark</h1></a>
                         <a id="pe2" class="images" href="https://www.behance.net/gallery/127645647/Death-Note-with-Ryuk" target="_blank"><h1 class="title">Death Note with Ryuk</h1></a>
                         <a id="pe3" class="images" href="https://www.behance.net/gallery/145224595/Absolute-Wedding" target="_blank"><h1 class="title">The Wedding</h1></a>
+                        <a id="pe4" class="images" href="https://www.behance.net/gallery/149510895/Spiderman-No-Way-Home-Poster" target="_blank"><h1 class="title">Spiderman NWH Poster</h1></a>
                     </div>
                 </div>
                 <div class="showcase" id="ix">
-                    <h1>UI/UX &#x1F4F1;</h1>
+                    <h1 class="domainName">UI/UX &#x1F4F1;</h1>
                     <div class="carousel">
                         <a id="ix1" class="images" href="https://www.behance.net/gallery/144899381/Yourskool" target="_blank"><h1 class="title">Yourskool</h1></a>
                         <a id="ix2" class="images" href="https://www.behance.net/gallery/147037191/Noter-A-Note-App" target="_blank"><h1 class="title">Noter</h1></a>
                     </div>
                 </div>
                 <div class="showcase" id="fe">
-                    <h1>Front-End Web &#x1F310;</h1>
+                    <h1 class="domainName">Front-End Web &#x1F310;</h1>
                     <div class="carousel">
                         <a id="fe1" class="images" href="https://anuragghooshh.github.io/Grievance-Redressal-Web-Barbarians" target="_blank"><h1 class="title">Grievance Redressal</h1></a>
                         <a id="fe2" class="images" href="https://anuragghooshh.github.io/Password-Generator/" target="_blank"><h1 class="title">Password Generator</h1></a>
@@ -142,5 +141,18 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="Script/landingScript.js"></script>
+    <script>
+        let navHeight = (document.getElementsByTagName("nav")[0].offsetHeight)+15;
+        let domainName = document.querySelectorAll(".domainName");
+        const topGap = (height)=>{
+            domainName.forEach(h1=>{
+                h1.style.top = height+"px";
+            })
+        }
+        topGap(navHeight);
+        window.addEventListener('resize', (event) => {
+            (window.innerWidth>480)?topGap(navHeight):topGap(0);     
+        });
+    </script>
 </body>
 </html>
